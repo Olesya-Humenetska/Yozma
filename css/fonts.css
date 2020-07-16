@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Cabin-Regular", sans-serif;
+    src: url(../fonts/cabinregular.ttf);
+    font-weight: 300;
+    font-style: normal
+}
+@font-face {
+    font-family: "Fjallaone", sans-serif;
+    src: url(../fonts/Fjallaone.ttf);
+    font-weight: 300;
+    font-style: normal
+}

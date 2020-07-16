@@ -1,0 +1,192 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1;
+    background-color: #fff;
+}
+.wrapper {
+	width: 100%;
+	max-width: 1208px;
+    margin: 10px 20px;
+	text-align: center;
+}
+.wrapper-technologies {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper-technologies__fieldset {
+    border: 2px solid #ACC1DA;
+    border-radius: 0 8px 8px 8px;
+}
+.wrapper-technologies__fieldset-title {
+    color: #fff;
+    font-size: 32px;
+    text-align: left;
+    font-family: "Fjallaone", sans-serif;
+}
+.wrapper-technologies__fieldset-title p {
+    padding: 4px 16px;
+    line-height: 56px;
+    background-color: #5CBF1A;
+    margin: 20px 16px 20px 46px;
+}
+.technologiests {
+    margin: 20px 30px 48px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(120px,1fr));
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    overflow: hidden;
+}
+.technologiest {
+    position: relative;
+    padding: 24px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 1px #E5E5EA;
+}
+.technologiest:before {
+    content: "";
+    position: absolute;
+    right: -12px;
+    bottom: -8px;
+    width: 24px;
+    height: 16px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.technologiest .technologiest_img {
+    height: 32px;
+    width: 100%;
+    object-fit: contain;
+}
+.technologiest .technologiest_title {
+    font-family: "Cabin-Regular", sans-serif;
+    font-size: 14px;
+    color: #212529;
+    line-height: 24px;
+    padding-top: 10px;
+}
+/************************************************** hint IE*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+    .technologiests {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .technologiest {
+        max-width: 150px;
+        flex: 1 1 130px;
+    }
+}
+
+@supports (-ms-accelerator:true) {
+    /* IE Edge 12+ CSS styles go here */
+    .technologiests {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .technologiest {
+        max-width: 150px;
+        flex: 1 1 130px;
+    }
+}
+
+/**************************************************END hint IE*/
+.technologiests-slider {
+    display: none;
+}
+@media (max-width: 768px) {
+    .technologiests-slider {
+        display: grid;
+    }
+    .technologiests-full {
+        display: none;
+    }
+    .technologiests {
+        margin: 35px 10px;
+        padding: 0 50px;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .technologiest {
+        display: flex !important;
+        padding: 16px 40px;
+        box-shadow: 0 0 0 1px #E5E5EA;
+    }
+    .slick-prev, .slick-next {
+        position: absolute;
+        font-size: 0;
+        line-height: 0;
+        top: 50%;
+        display: block;
+        width: 30px;
+        height: 30px;
+        padding: 16px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: #acc1da;
+        transition: 0.3s;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+    }
+    .slick-prev:before, .slick-next:before {
+        content: none;
+    }
+
+    .slick-prev {
+        left: 5px;
+        background-image: url(../img/arrow-left.svg);
+        background-size: 14px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .slick-prev:hover{
+        background: #7c8b9c;
+        background-image: url(../img/arrow-left.svg);
+        background-size: 14px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .slick-next {
+        right: 5px;
+        background-image: url(../img/arrow-right.svg);
+        background-size: 14px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .slick-next:hover {
+        background: #7c8b9c;
+        background-image: url(../img/arrow-right.svg);
+        background-size: 14px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+@media (max-width: 574px) {
+    .technologiests {
+        padding: 0 15px;
+    }
+    .wrapper-technologies__fieldset-title {
+        font-size: 18px;
+    }
+}
